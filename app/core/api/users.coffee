@@ -83,4 +83,11 @@ module.exports = {
       method: 'GET'
     }))
 
+  fetchByIds: (userIds) ->
+    fetchJson("/db/user", {
+      method: 'GET',
+      data: {
+        fetchByIds: userIds
+      }
+    })
 }
